@@ -8,6 +8,10 @@ mongoose.connect("mongodb://localhost/vinted-orion22");
 const app = express();
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.json("Welcome on Vinted Api ! 🎉");
+});
+
 //import des routes users et offers
 const usersRoutes = require("./routes/users");
 app.use(usersRoutes);
